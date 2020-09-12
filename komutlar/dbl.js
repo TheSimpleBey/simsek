@@ -5,10 +5,8 @@ exports.run = async (bot, message, args) => {
    if(message.author.bot) return;
   const DBL = require("dblapi.js");
   const dbl = new DBL(
-    `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MjQzNjIyMzMxNDU1ODk3NiIsImJvdCI6dHJ1ZSwiaWF0IjoxNTc2MzIwMDMxfQ.fbbZYB4SuE42yGFuvSASSbiYt6XTYi_VcmmyghLo7Fw
-`,
-    bot
-  );
+    (`eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MjQzNjIyMzMxNDU1ODk3NiIsImJvdCI6dHJ1ZSwiaWF0IjoxNTc2MzIwMDMxfQ.fbbZYB4SuE42yGFuvSASSbiYt6XTYi_VcmmyghLo7Fw`),
+    bot );
   var botcuk = "";
   let mesaj = args.slice(0).join(" ");
   let botcuk2 = message.mentions.users.first() || bot.users.get(args[0]);

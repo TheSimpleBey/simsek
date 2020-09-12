@@ -1,25 +1,27 @@
-const Discord = require("discord.js");
 
-module.exports.run = async (client, message) => {
+const Discord = require('discord.js');
+
+
+exports.run = function(client, message, embed, params) {
+  const chypercode = new Discord.RichEmbed()
+
+  .setColor('RED')
+  .setImage('https://api.alexflipnote.dev/supreme?text='+ client.ping +'%20Ping')
+
+    message.channel.send(chypercode);
+
+};   
   
-  const embed = new Discord.RichEmbed()
-    .setColor("BLUE")
-    .addField(`Ping`, client.ping+"ms")
-.setFooter(client.user.username, client.user.avatarURL)
-
-  message.channel.send(embed);
+//CHYPER CODE <3
+exports.conf = {
+  enabled: true, 
+  guildOnly: true, 
+  aliases: ['ms'],
+  permLevel: 0 
 };
 
-module.exports.conf = {
-  enabled: true,
-  guildOnly: false,
-  aliases: [],
-  permLevel: 0,
-  kategori: "sunucu"
-};
-
-module.exports.help = {
-  name: "ping",
-  description: "ping",
-  usage: "ping"
+exports.help = {
+  name: 'ping', 
+  description: 'Bota Ait Ping Değerini Gösterir.',
+  usage: 'ping'
 };
