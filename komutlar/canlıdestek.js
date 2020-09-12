@@ -10,7 +10,7 @@ exports.run = async(client, message, args) => {
       .addField('Dikkat', `Canlı Destek Talebi`)
       .setColor("RED")
       .addField(`Bilgiler`, `Sunucu: ${message.guild.name} \n Kanal: ${message.channel.name} \n Destek İsteyen: ${message.author.tag}`)
-      .setFooter("SyreX | Canlı Destek")
+      .setFooter("Şimşek Bot | Canlı Destek")
   client.channels.get(destekKanal).send(embed);
   const collector = client.channels.get(destekKanal).createCollector(message => message.content.startsWith(''), {
     time: 0
@@ -35,11 +35,11 @@ exports.run = async(client, message, args) => {
           if (isEnabled === false) return
           if (message.author.id === client.user.id) return
           if (message.content.startsWith('iptal')) {
-            message.channel.send(`**<a:red:703842141620666409> Canlı destek talebini iptal ettiniz.\n<a:gg:692365557839691809> SyreX Bot olarak sizlere iyi bir hizmet sağlayabildiysek ne mutlu bize,iyi günler.**`)
+            message.channel.send(`**<a:red:703842141620666409> Canlı destek talebini iptal ettiniz.\n<a:gg:692365557839691809> Şimşek Bot olarak sizlere iyi bir hizmet sağlayabildiysek ne mutlu bize,iyi günler.**`)
             if (message.channel.id === chan.id)
               client.channels.get(destekKanal).send(`**<a:red:703842141620666409> Canlı destek talebi kullanıcı tarafından iptal edildi.**`)
             if (message.channel.id === destekKanal) 
-              chan.send(`<a:red:703842141620666409> Canlı destek talebiniz yetkili tarafından iptal edildi.\n<a:gg:692365557839691809> SyreX Bot olarak sizlere iyi bir hizmet sağlayabildiysek ne mutlu bize,iyi günler.**`)
+              chan.send(`<a:red:703842141620666409> Canlı destek talebiniz yetkili tarafından iptal edildi.\n<a:gg:692365557839691809> Şimşek Bot olarak sizlere iyi bir hizmet sağlayabildiysek ne mutlu bize,iyi günler.**`)
             return isEnabled = false
           }
           if (message.channel.id === chan.id) 

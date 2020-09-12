@@ -25,9 +25,7 @@ module.exports.run = async (bot, message) => {
       true
     )
     .addField(`Bu Sunucu Premium Mu?`, pre, false)
-    .addField(`Destek Sunucusu`, `https://discord.gg/e8P8Z5h`, false)
-    .addField(`Sitemize Göz Atın`, `http://linlordscode.glitch.me`, false)
-    .setFooter(bot.user.username, bot.user.avatarURL);
+    .addField(`» Linkler`, `[Bot Davet Linki](https://discord.com/api/oauth2/authorize?client_id=644234599601274912&permissions=8&redirect_uri=https%3A%2F%2Fcanim-bot.glitch.me%2Fcallback&scope=bot) **|** [Destek Sunucusu](https://discord.gg/yxRRTKa) **|** [Youtube Kanalımız](https://www.youtube.com/channel/UCfKKzCn1YuHu_hWKciYb2yw/featured?view_as=subscriber)`)
   message.channel.send(embed);
 };
 
